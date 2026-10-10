@@ -82,10 +82,22 @@ No Linux/macOS:
 ./calculadora
 ```
 
-No Windows (Prompt de Comando ou PowerShell):
+No Windows (Prompt de Comando):
 
-```bash
+```bat
 calculadora.exe
+```
+
+No Windows (PowerShell):
+
+```powershell
+./calculadora.exe
+```
+
+Ou, alternativamente:
+
+```powershell
+.\calculadora.exe
 ```
 
 ---

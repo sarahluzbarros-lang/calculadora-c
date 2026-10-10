@@ -1,6 +1,6 @@
 # Calculadora Interativa em C
 
-Uma aplicação de terminal (CLI) interativa, rápida e amigável desenvolvida em **Linguagem C**. O projeto oferece uma interface via linha de comando organizada por menus para que o usuário execute cálculos aritméticos básicos e operações avançadas de forma intuitiva.
+Uma aplicação de terminal (CLI) simples e eficiente desenvolvida na linguagem de programação **C**. O programa oferece um menu interativo para realizar as quatro operações aritméticas fundamentais.
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Language: C](https://img.shields.io/badge/Language-C99-blue.svg)
@@ -11,44 +11,40 @@ Uma aplicação de terminal (CLI) interativa, rápida e amigável desenvolvida e
 ## 1. Título e Descrição
 
 ### Sobre o Projeto
-A **Calculadora Interativa em C** foi projetada para demonstrar boas práticas de desenvolvimento na linguagem C, como modularização de código, manipulação limpa de entrada/saída de dados no terminal e prevenção de erros comuns em tempo de execução (como divisão por zero e raízes quadradas de números negativos).
+A **Calculadora Interativa em C** é uma ferramenta de linha de comando projetada para executar cálculos matemáticos básicos de forma direta e intuitiva.
 
 ### Principais Funcionalidades
-- **Operações Básicas:** Soma, Subtração, Multiplicação e Divisão.
-- **Operações Avançadas:** Potenciação e Raiz Quadrada.
-- **Interface Limpa:** Menu interativo no terminal com opção de continuar executando até que o usuário solicite a saída.
-- **Tratamento de Erros:** Validações para evitar travamentos ou comportamentos indefinidos ao digitar dados inválidos.
+- **Operações aritméticas básicas:** soma (`+`), subtração (`-`), multiplicação (`*`) e divisão (`/`).
+- **Menu interativo:** permite realizar múltiplas operações em sequência.
+- **Validação de entrada:** trata valores inválidos e mensagens de erro.
+- **Validação de divisão por zero:** identifica e bloqueia tentativas de divisão por zero.
+- **Opção de encerramento:** sai do programa por meio da opção `5` no menu.
 
 ---
 
 ## 2. Demonstração
 
-Abaixo está uma representação visual do funcionamento do sistema no terminal:
+Exemplo do fluxo textual de interação no terminal:
 
 ```text
 ==================================================
-           CALCULADORA INTERATIVA EM C            
+           CALCULADORA INTERATIVA EM C
 ==================================================
   [1] Adição (+)
   [2] Subtração (-)
   [3] Multiplicação (*)
   [4] Divisão (/)
-  [5] Potenciação (^)
-  [6] Raiz Quadrada (√)
-  [0] Sair do Programa
+  [5] Sair
 ==================================================
-Escolha uma opção: 4
+Escolha uma opção: 1
 
-Digite o primeiro número (dividendo): 50
-Digite o segundo número (divisor): 2.5
+Digite o primeiro número: 12.5
+Digite o segundo número: 7.5
 
 --------------------------------------------------
-Resultado: 50.00 / 2.50 = 20.00
+Resultado: 12.50 + 7.50 = 20.00
 --------------------------------------------------
-
-Pressione ENTER para retornar ao menu...
-
----
+```
 
 ## 📸 Demonstração
 
@@ -56,13 +52,92 @@ Pressione ENTER para retornar ao menu...
 
 ---
 
-## 🛠️ Instalação e Pré-requisitos
+## 3. Instalação e Pré-requisitos
 
 ### Pré-requisitos
+Para compilar e executar o código em C, é necessário ter um compilador C instalado, como o **GCC** (GNU Compiler Collection).
 
-Para compilar e executar o código em C, é necessário ter um compilador C instalado no seu sistema operacional, como o **GCC** (GNU Compiler Collection).
-
-#### Como verificar a instalação do GCC:
+#### Como verificar a instalação do GCC
 Abra o terminal e execute:
+
 ```bash
 gcc --version
+```
+
+Se a instalação estiver correta, o comando exibirá a versão do compilador.
+
+### Compilação
+No diretório do projeto, compile o arquivo principal em C:
+
+```bash
+gcc main.c -o calculadora
+```
+
+> Se o nome do arquivo fonte for diferente, substitua `main.c` pelo nome real do arquivo.
+
+### Execução
+No Linux/macOS:
+
+```bash
+./calculadora
+```
+
+No Windows (Prompt de Comando ou PowerShell):
+
+```bash
+calculadora.exe
+```
+
+---
+
+## 4. Como Usar
+
+Ao iniciar o programa, o menu abaixo será exibido:
+
+```text
+==================================================
+           CALCULADORA INTERATIVA EM C
+==================================================
+  [1] Adição (+)
+  [2] Subtração (-)
+  [3] Multiplicação (*)
+  [4] Divisão (/)
+  [5] Sair
+==================================================
+Escolha uma opção:
+```
+
+### Exemplos de uso
+- Digite `1` para somar dois números.
+- Digite `2` para subtrair.
+- Digite `3` para multiplicar.
+- Digite `4` para dividir.
+- Digite `5` para encerrar a aplicação.
+
+O programa solicita os dois operandos e, em seguida, mostra o resultado da operação selecionada. Caso o usuário informe um valor inválido ou tente dividir por zero, uma mensagem de erro é exibida e o programa continua funcionando normalmente.
+
+---
+
+## 5. Estrutura do Projeto
+
+```text
+calculadora-c/
+├── main.c                 # Código-fonte principal da calculadora
+├── assets/                # Arquivos visuais e imagens de demonstração
+│   └── demo.png
+├── LICENSE                # Licença MIT do projeto
+├── README.md              # Documentação do projeto
+└── ...
+```
+
+> O nome do arquivo principal pode variar de acordo com a organização do repositório; o importante é que ele contenha a lógica da calculadora.
+
+---
+
+## 6. Licença
+
+Este projeto está licenciado sob a licença **MIT**. Consulte o arquivo [LICENSE](LICENSE) para obter mais detalhes.
+
+A licença MIT permite o uso, cópia, modificação, fusão, publicação, distribuição e venda do software, desde que a licença e o aviso de copyright sejam mantidos.
+
+---

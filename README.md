@@ -16,7 +16,7 @@ A **Calculadora Interativa em C** é uma ferramenta de linha de comando projetad
 ### Principais Funcionalidades
 - **Operações aritméticas básicas:** soma (`+`), subtração (`-`), multiplicação (`*`) e divisão (`/`).
 - **Menu interativo:** permite realizar múltiplas operações em sequência.
-- **Validação de entrada:** trata valores inválidos e mensagens de erro.
+- **Entrada de dados:** solicita dois números para cada operação.
 - **Validação de divisão por zero:** identifica e bloqueia tentativas de divisão por zero.
 - **Opção de encerramento:** sai do programa por meio da opção `5` no menu.
 
@@ -70,10 +70,10 @@ Se a instalação estiver correta, o comando exibirá a versão do compilador.
 No diretório do projeto, compile o arquivo principal em C:
 
 ```bash
-gcc main.c -o calculadora
+gcc src/main.c -o calculadora
 ```
 
-> Se o nome do arquivo fonte for diferente, substitua `main.c` pelo nome real do arquivo.
+Execute o comando no diretório raiz do projeto.
 
 ### Execução
 No Linux/macOS:
@@ -114,7 +114,7 @@ Escolha uma opção:
 - Digite `4` para dividir.
 - Digite `5` para encerrar a aplicação.
 
-O programa solicita os dois operandos e, em seguida, mostra o resultado da operação selecionada. Caso o usuário informe um valor inválido ou tente dividir por zero, uma mensagem de erro é exibida e o programa continua funcionando normalmente.
+O programa solicita os dois operandos e, em seguida, mostra o resultado da operação selecionada. A divisão por zero é bloqueada com uma mensagem de erro. A leitura dos operandos não verifica se a entrada numérica foi bem-sucedida; portanto, informe números válidos.
 
 ---
 
@@ -122,15 +122,14 @@ O programa solicita os dois operandos e, em seguida, mostra o resultado da opera
 
 ```text
 calculadora-c/
-├── main.c                 # Código-fonte principal da calculadora
+├── src/
+│   └── main.c             # Código-fonte principal da calculadora
 ├── assets/                # Arquivos visuais e imagens de demonstração
 │   └── demo.png
 ├── LICENSE                # Licença MIT do projeto
 ├── README.md              # Documentação do projeto
 └── ...
 ```
-
-> O nome do arquivo principal pode variar de acordo com a organização do repositório; o importante é que ele contenha a lógica da calculadora.
 
 ---
 
